@@ -1,0 +1,14 @@
+body {
+    background: url(../img/background.jpeg) center/cover no-repeat;
+    opacity: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#workmate,
+#user {
+    width: 600px;
+    height: 50px;
+    font-size: 40px;
+    margin: 0 auto;
+}
