@@ -4,7 +4,6 @@ import intro from '@/view/login/intro.vue'
 import alert from "@/view/login/alert"
 import password from "@/view/login/password";
 import lunchTime from "@/view/questions/lunchTime";
-import lunchTimeWrong from "@/view/questions/lunchTimeWrong";
 import promotion from "@/view/questions/promotion";
 import fireWall from "../view/questions/fireWall";
 import emailAttack from "../view/questions/emailAttack";
@@ -18,7 +17,6 @@ export default [
     {path: "/alert", component: alert},
     {path: "/password", component: password},
     {path: "/lunchTime", component: lunchTime},
-    {path: "/lunchTimeWrong", component: lunchTimeWrong},
     {path: "/promotion", component: promotion},
     {path: "/fireWall", component: fireWall},
     {path: "/emailAttack", component: emailAttack},

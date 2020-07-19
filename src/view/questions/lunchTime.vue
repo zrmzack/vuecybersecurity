@@ -1,10 +1,11 @@
 <template>
     <div><h1>
-        username:
-        position:
+        username:{{username}}
+        position:{{position}}
         money:
         cybersecurity
     </h1>
+
 
         <div id="question">
             <p>Workmate invite you to have lunch together, but some important documents put in your table, you need some
@@ -19,6 +20,12 @@
             </ul>
         </div>
 
+
+        <div v-for="(qname,qindex) in qanda" v-show="qindex == curr_q_index">
+            <p>Q{{qindex}}:</p>
+            <el-radio v-model="radio1" label="1" border>备选项1</el-radio>
+            <el-radio v-model="radio1" label="2" border>备选项2</el-radio>
+        </div>
     </div>
 
 
@@ -26,7 +33,33 @@
 
 <script>
     export default {
-        name: "lunchTime"
+        name: "lunchTime",
+        created() {
+            console.log(this.$route.query.username)
+            this.username = this.$route.query.username
+        },
+        data() {
+            return {
+                username: '',
+                position: 'test',
+                curr_q_index:'1',
+
+                qanda: {
+                    1: {
+                        A: 1,
+                        B: 2
+                    },
+                    2: {
+                        A: 1,
+                        B: 2
+                    }
+                },
+
+                // questions
+                radio1: '',
+                radio2: '1',
+            }
+        }
     }
 </script>
 
